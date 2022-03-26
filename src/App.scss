@@ -7,9 +7,14 @@ $secondary: #660096;
 $tertiary: #d790ba;
 $support: #2d2623;
 $text: #E5E5E5; 
+
 body{
     background-color: $support;
     color: $text;
+    font-family: "Karla", sans-serif;
+}
+span {
+    color:#d790ba; 
 }
 *{
     margin: 0;
@@ -21,14 +26,59 @@ body{
 }
 .container{
     max-width: 530px;
-    border: 1px solid black;
     margin: 0 auto;
     height: 100vh;  
     .header {
+        // border: 1px solid white;
         .box{
             height: 230px;
             background: linear-gradient(90deg, $secondary 30%, $primary);
             filter: blur(100px); 
+        }
+        p{
+            width: 100%;
+            text-align: justify;
+        }
+        .avatar-container {
+            width: 100%;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            .avatar-face {
+                border-radius: 50%;
+                border: 5px solid $tertiary;
+                width: 120px;
+                height: 120px;
+                background-position: center;
+                background-size: 225%;
+                background-position-y: -25px;
+                background-image: url("./assets/avatar-eu.png");
+            }
+            .avatar-desc {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                & h1 {
+                    font-size: 3em;
+                }
+                & p {
+                    font-size: 1.1em;
+                    
+                    color: white; 
+                }
+            }
+        }
+        .social-media {
+            justify-content: flex-end;
+            display: flex;
+            align-items: center;
+            gap: 10px;  
+            & a {
+                &:hover {
+                    transform: scale(120%);
+                }
+            }  
         }
     }
 }
